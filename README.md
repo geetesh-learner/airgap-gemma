@@ -1,6 +1,6 @@
-# Airgap Gemma (Prototype 1)
+# Airgap Gemma
 
-> 100% Local, Offline AI Innovation with Google Gemma 2 2B.
+> 100% Local, Offline Conversational AI with Google Gemma 2 2B.
 
 Built for **Hacktoberfest 2026 Hack Day – Track 8: Build Anything with Gemma**.
 
@@ -8,17 +8,18 @@ Built for **Hacktoberfest 2026 Hack Day – Track 8: Build Anything with Gemma**
 
 ## 🎯 Project Overview
 
-**Airgap Gemma** demonstrates a truly local, air-gapped generative AI assistant. It requires **zero cloud API keys, zero external internet connectivity, and zero third-party telemetry**. All prompt processing and inference execute completely on-device via local Ollama.
+**Airgap Gemma** is a private, air-gapped conversational AI assistant. It requires **zero cloud API keys, zero external internet connectivity, and zero third-party telemetry**. All prompt processing and inference execute completely on-device via local Ollama.
 
 ---
 
-## 🚀 Features (Prototype 1)
+## 🚀 Key Features
 
-- **AI Name**: `prototype 1`
-- **Core Engine**: Google Gemma 2 2B (`gemma2:2b`) running via local Ollama (`http://localhost:11434`)
-- **Zero-Cloud Guarantee**: Complies strictly with the hackathon zero-external-AI policy
-- **Defensive Error Handling**: Graceful fallback and connection status checks
-- **Interactive UI**: Streamlit interface designed for local experimentation
+- **Conversational Chat Interface**: Multi-turn dialogue with memory retained in session state.
+- **Natural Enter-Key Submission**: Instant prompt submission using `st.chat_input` (press Enter to send).
+- **Real-Time Token Streaming**: Low-latency token-by-token generation with local Gemma 2 2B.
+- **Zero-Cloud Guarantee**: Complies strictly with the hackathon zero-external-AI policy.
+- **Telemetry Sidebar**: Real-time system status, local hardware verification, and one-click chat reset.
+- **Modern Obsidian & Cyan Theme**: Curated dark theme configured via `.streamlit/config.toml`.
 
 ---
 
@@ -37,19 +38,23 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Run Prototype 1
+### 3. Launch the Application
 ```bash
 streamlit run app.py
 ```
+Open [http://localhost:8501](http://localhost:8501) in your browser.
 
 ---
 
-## 🧪 Testing & CI
+## 🧪 Testing & Linting (Rule 3 Compliance)
 
-Run linting and tests locally before committing:
+Run all local verifications before committing:
 ```bash
-ruff check .
+# Run full unit test suite
 pytest -q
+
+# Run Ruff linter
+ruff check .
 ```
 
 ---

@@ -173,7 +173,5 @@ if active_prompt:
     )
     # Render timestamp for the assistant message (already shown by the loop,
     # but we add it here so the latest message appears instantly)
-    with st.chat_message("assistant", avatar="🛡️"):
-        st.markdown(full_response)
-        st.markdown(f'<div class="msg‑ts">{ts_assist}</div>', unsafe_allow_html=True)
+
 
